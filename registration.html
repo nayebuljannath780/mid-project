@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+
+
+    <style>
+        .registration_form {
+            margin: 2%;
+            padding: 3%;
+        }
+
+        form {
+            margin-left: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <img src="img/logo2.png" alt="" width="5%">
+            <h1 style="display: inline;">Online Education Hub,Sylhet</h1>
+            <h2>Bangladesh</h2>
+        </div>
+        <div class="navBar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Course</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML</a>
+                        <a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS</a>
+                        <a href="https://www.w3schools.com/js/default.asp" target="_blank">javaScript</a>
+                        <a href="https://www.w3schools.com/php/default.asp" target="_blank">Php</a>
+                    </div>
+                </li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="registration_form">
+            <h3>Registration</h3>
+            <hr>
+            <form action="">
+                <table>
+                    <tr>
+                        <td><label>First Name: </label></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lastName">Last Name:</label></td>
+                        <td><input type="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mobile">Mobile:</label></td>
+                        <td><input type="tel"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pass">Password:</label></td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="conPass">Confirm Password:</label></td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="certificate">Certificate:</label></td>
+
+                        <td>
+                            <input type="checkbox" value="pec" name="check-certificate">
+                            <label>PEC</label>
+                            <input type="checkbox" value="JSC" name="check-certificate">
+                            <label>JSC</label>
+                            <input type="checkbox" value="ssc" name="check-certificate">
+                            <label>SSC</label>
+                            <input type="checkbox" value="hsc" name="check-certificate">
+                            <label>HSC</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender:</label></td>
+                        <td>
+                            <input type="radio" name="gender_group">
+                            <label>Male</label>
+                            <input type="radio" name="gender_group">
+                            <label>Female</label>
+                            <input type="radio" name="gender_group">
+                            <label>Others</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="board_name">Board Name:</label></td>
+                        <td>
+                            <select>
+                                <option>Chose option</option>
+                                <option>Sylhet</option>
+                                <option>Dhaka</option>
+                                <option>Rajshahi</option>
+                                <option>Borishal</option>
+                                <option>Cumillah</option>
+                                <option>Chottogram</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">Date of birth:</label></td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="uploadPic">Upload Photo:</label></td>
+                        <td><input type="file"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="reset" value="Reset">
+                            <input type="submit" value="Register">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <small>This website is develope by &copy;Nayebul Jannath Chowdhury<br>
+            all of the right goes to Moni sir</small>
+    </footer>
+</body>
+
+</html>
