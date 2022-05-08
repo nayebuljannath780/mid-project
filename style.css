@@ -1,27 +1,43 @@
 body {
-  background-color: #5CDB95;
-  /* background-image: linear-gradient(to right,rgb(186, 206, 195), rgb(50, 150, 95)); */
+  background-color: #080710;
+  color: white;
+}
+
+main {
+  font-family: 'Eater', cursive;
+  font-family: 'Ms Madi', cursive;
+  font-family: 'Nosifer', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Tapestry', cursive;
 }
 
 .title {
-  margin: 0;
-  padding: 0;
+
+  font-family: 'Ms Madi', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Tapestry', cursive;
   text-align: center;
+  color: rgb(229, 227, 226);
 }
-
-h1,
-h2 {
-  color: rgb(114, 19, 19);
+p{
+  color: dimgray;
 }
-
-h3 {
-  font-size: 30px;
-  text-align: center;
-  color: rgb(9, 70, 160);
+span {
+  color: #d4300a;
+  font-size: 60px;
 }
-
-P {
-  text-align: justify;
+h4{
+  font-size: 35px;
+}
+h5{
+  font-size: 20px;
+}
+*.product_price{
+  font-size: 25px;
+  font-weight: 600px;
+  margin-right: 20%;
+  display: inline-block;
 }
 
 .main_container {
@@ -30,13 +46,13 @@ P {
 
 .first_half_div {
   width: 70%;
-  margin: 2%;
+  /* margin: 2%; */
   padding: 2%;
 }
 
 .second_half_div {
   width: 28%;
-  padding: 10px;
+  padding: 0 1.5%;
 }
 
 .slider_section {
@@ -45,17 +61,54 @@ P {
   margin-bottom: 5%;
 }
 
+.slider_img {
+  width: 400px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.categories_section {
+  display: flex;
+}
+
+.flashSale_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 90%;
+  margin: 4%;
+  padding: 8%;
+  background-color: rgba(255, 255, 255, 0.13);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  border-radius: 2%;
+}
+
+.card_img img {
+  width: 220px;
+  height: 200px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+button {
+  padding: 5%;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 8%;
+  color: white;
+  background-color: #d4300a;
+}
+
 footer {
   height: 60px;
   text-align: center;
-  color: white;
-  background-color: rgb(49, 65, 160);
+  color: dimgrey;
+  background-color: #28272f;
 }
-
-
-
-
-
 
 
 
@@ -68,7 +121,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #28272f;
 }
 
 li {
@@ -86,7 +139,8 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #d4300a;
+
 }
 
 li.dropdown {
@@ -111,7 +165,8 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #080710;
+  color: white;
 }
 
 .dropdown:hover .dropdown-content {
@@ -119,17 +174,17 @@ li.dropdown {
 }
 
 
-.slider_section {
-  margin-left: 5%;
+.slider_div {
+  margin: 5%;
 }
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 body {
   font-family: Verdana, sans-serif;
-  margin: 0
+  margin: 0;
 }
 
 .mySlides {
@@ -138,6 +193,7 @@ body {
 
 img {
   vertical-align: middle;
+
 }
 
 /* Slideshow container */

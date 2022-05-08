@@ -2,32 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Buy or Die</title>
     <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
 
-
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
     <style>
-        .form_div {
-            margin-bottom: 2%;
+        body {
+            background-image: url(images/57.png);
+            /* background-size: contain; */
+            background-repeat: no-repeat;
+            background-size: 710px;
+            background-position: left bottom;
         }
 
-        table {
-            border-radius: 4%;
-            background-color: black;
-            color: white;
-            padding: 4%;
-            margin-top: 1%;
-            margin-left: 33%;
+        form {
+            height: 550px;
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.13);
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+            margin: 4% 35%;
         }
 
-        #sub_button {
-            border-radius: 15%;
-            padding: 2% 5%;
-            margin-left: 80%;
+        form * {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            /* outline: none; */
+            border: none;
+        }
+
+        form h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        input {
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        ::placeholder {
+            color: #e5e5e5;
+        }
+
+        button {
+            margin-top: 50px;
+            width: 100%;
+            color: #071007;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -35,21 +83,20 @@
 <body>
     <header>
         <div class="title">
-            <img src="img/logo2.png" alt="" width="5%">
-            <h1 style="display: inline;">Online Education Hub,Sylhet</h1>
-            <h2>Bangladesh</h2>
+            <h1 style="display: inline;"><span>Buy</span> or Die</h1>
+            <h3>Buy for live</h3>
         </div>
         <div class="navBar">
             <ul>
                 <li><a href="index.html">Home</a></li>
 
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Course</a>
+                    <a href="javascript:void(0)" class="dropbtn">Categories</a>
                     <div class="dropdown-content">
-                        <a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML</a>
-                        <a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS</a>
-                        <a href="https://www.w3schools.com/js/default.asp" target="_blank">javaScript</a>
-                        <a href="https://www.w3schools.com/php/default.asp" target="_blank">Php</a>
+                        <a href=http://127.0.0.1:5500/index.html#bag>Bag</a>
+                        <a href=http://127.0.0.1:5500/index.html#shoes>Shoes</a>
+                        <a href=http://127.0.0.1:5500/index.html#t-shirt>T-shirt</a>
+                        <a href=http://127.0.0.1:5500/index.html#flash-sale>Flash Sale</a>
                     </div>
                 </li>
                 <li><a href="registration.html">Registration</a></li>
@@ -60,42 +107,58 @@
             </ul>
         </div>
     </header>
-    <main>
-        <div class="form_div">
-            <h3>Login</h3>
-            <hr>
-            <form action="#" method="post" onsubmit="formValidation()">
-                <table>
 
-                    <tr>
-                        <td><label for="fNmae">First Name: </label></td>
-                        <td><input type="text" id="first_Name"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="lName">Last Name: </label></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="pass">Password: </label></td>
-                        <td><input type="password"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="cPass">Confirm Password: </label></td>
-                        <td><input type="password"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="submit" value="Login" id="sub_button">
-                        </td>
-                    </tr>
-                </table>
+    <main>
+        <div class="container">
+
+            <form action="#">
+                <h3>Login Here</h3>
+
+                <label for="username">Email</label>
+                <input type="text" placeholder="Email or Phone" id="loginEmail">
+                <span style="color:red; font-size:12px;" id="eError"></span>
+
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" id="password">
+                <span style="color:red; font-size:12px;" id="pError"></span>
+
+                <button onclick="loginValidation()">Log In</button>
             </form>
         </div>
     </main>
     <footer>
-        <small>This website is develope by &copy;Nayebul Jannath Chowdhury<br>
+        <small>This website is develope by <span style="font-size: small;">&copy;Nayebul Jannath Chowdhury<br></span>
             all of the right goes to Moni sir</small>
     </footer>
+
+    <script>
+        function loginValidation() {
+            var emailReg = /(cse|eee|cee|arch)_\d{10}@lus\.ac.bd/
+            var passReg = /((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[#,*,.,$,@])).{8,20}/
+
+            var email = document.getElementById('loginEmail').value;
+            var password = document.getElementById('password').value;
+
+
+
+            //email validation
+            if (!email.match(emailReg)) {
+                document.getElementById("eError").innerHTML = "invalid email";
+            }
+            else {
+                document.getElementById("eError").innerHTML = "";
+            }
+
+
+            // password validation
+            if (!password.match(passReg)) {
+                document.getElementById("pError").innerHTML = "password must contain 1 special char, 1 capital latter, 1 small latter, 1 digit & length 8-20";
+            }
+            else {
+                document.getElementById("pError").innerHTML = "";
+            }
+        }
+    </script>
 </body>
 
 </html>

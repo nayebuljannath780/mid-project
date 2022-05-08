@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buy or Die</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
 
@@ -16,21 +16,23 @@
         }
 
         button {
-            margin: 5%;
-            padding: 7%;
-            border-radius: 12%;
+            width: 300px;
+            height: 80px;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 20px;
             color: white;
-            background-image: linear-gradient(to right, rgb(245, 81, 81), rgb(179, 11, 11));
+            background-color: #d4300a;
         }
 
         button:hover {
             cursor: pointer;
-            background-image: linear-gradient(to right, rgb(106, 134, 209), rgb(9, 71, 141));
+            background-image: linear-gradient(to right, #4a9404, #76f80c);
             color: black;
         }
 
         .about_pic {
-            width: 50%;
+            width: 30%;
             height: 30%;
             margin-left: 12%;
             border-radius: 4%;
@@ -41,21 +43,20 @@
 <body>
     <header>
         <div class="title">
-            <img src="img/logo2.png" alt="" width="5%">
-            <h1 style="display: inline;">Online Education Hub,Sylhet</h1>
-            <h2>Bangladesh</h2>
+            <h1 style="display: inline;"><span>Buy</span> or Die</h1>
+            <h3>Buy for live</h3>
         </div>
         <div class="navBar">
             <ul>
                 <li><a href="index.html">Home</a></li>
 
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Course</a>
+                    <a href="javascript:void(0)" class="dropbtn">Categories</a>
                     <div class="dropdown-content">
-                        <a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML</a>
-                        <a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS</a>
-                        <a href="https://www.w3schools.com/js/default.asp" target="_blank">javaScript</a>
-                        <a href="https://www.w3schools.com/php/default.asp" target="_blank">Php</a>
+                        <a href=http://127.0.0.1:5500/index.html#bag>Bag</a>
+                        <a href=http://127.0.0.1:5500/index.html#shoes>Shoes</a>
+                        <a href=http://127.0.0.1:5500/index.html#t-shirt>T-shirt</a>
+                        <a href=http://127.0.0.1:5500/index.html#flash-sale>Flash Sale</a>
                     </div>
                 </li>
                 <li><a href="registration.html">Registration</a></li>
@@ -69,7 +70,8 @@
     <main>
         <div class="main_container">
             <div class="first_half_div">
-                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias quam debitis voluptas tenetur iure.
+                <p style="text-align: justify;"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias quam
+                    debitis voluptas tenetur iure.
                     Vero ipsum dignissimos facere minus distinctio, nemo dolor aspernatur enim ratione nisi sed totam
                     magni sit quidem vitae doloremque libero eveniet et sapiente, earum, error iusto asperiores. Sit
                     perspiciatis tempora excepturi aspernatur corporis nisi iste libero, voluptatibus facilis dolor
@@ -96,10 +98,11 @@
         </div>
         <img class="about_pic" src="img/my.jpg" alt="">
     </main>
-    <footer style="margin-top: 2%;">
-        <small>This website is develope by &copy;Nayebul Jannath Chowdhury<br>
+    <footer>
+        <small>This website is develope by <span style="font-size: small;">&copy;Nayebul Jannath Chowdhury<br></span>
             all of the right goes to Moni sir</small>
     </footer>
+
 </body>
 
 </html>

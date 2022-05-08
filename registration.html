@@ -5,41 +5,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Buy or Die</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
 
 
     <style>
-        .registration_form {
-            margin: 2%;
-            padding: 3%;
+        body {
+            background-image: url(images/1111.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            /* background-size: 600px; */
         }
 
         form {
-            margin-left: 35%;
+            height: 600px;
+            width: 550px;
+            background-color: rgba(255, 255, 255, 0.13);
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+            margin: 4% 30%;
+        }
+
+        form * {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            /* outline: none; */
+            border: none;
+        }
+
+        form h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+        }
+
+        label {
+            /* display: block; */
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        input {
+            height: 22px;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+        }
+
+        button {
+            text-align: center;
+            margin-top: 50px;
+            width: 100%;
+            color: #071007;
+            padding: 20px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            background-image: linear-gradient(to right, rgb(199, 110, 110), rgb(233, 8, 8));
+
+        }
+
+        span {
+            color: red;
+            font-size: 15px;
+        }
+
+        #submit_btn {
+            width: 300px;
+            height: 50px;
+            margin-left: 80px;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: #d4300a;
+            cursor: pointer;
+
+            /* padding: 5%;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8%;
+            color: white;
+            background-color: #d4300a; */
         }
     </style>
+
 </head>
 
 <body>
     <header>
         <div class="title">
-            <img src="img/logo2.png" alt="" width="5%">
-            <h1 style="display: inline;">Online Education Hub,Sylhet</h1>
-            <h2>Bangladesh</h2>
+            <!-- <img src="img/logo2.png" alt="" width="5%"> -->
+            <h1 style="display: inline;">Buy or Die</h1>
+            <h3>Buy for live</h3>
         </div>
         <div class="navBar">
             <ul>
                 <li><a href="index.html">Home</a></li>
 
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Course</a>
+                    <a href="javascript:void(0)" class="dropbtn">Categories</a>
                     <div class="dropdown-content">
-                        <a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML</a>
-                        <a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS</a>
-                        <a href="https://www.w3schools.com/js/default.asp" target="_blank">javaScript</a>
-                        <a href="https://www.w3schools.com/php/default.asp" target="_blank">Php</a>
+                        <a href=http://127.0.0.1:5500/index.html#bag>Bag</a>
+                        <a href=http://127.0.0.1:5500/index.html#shoes>Shoes</a>
+                        <a href=http://127.0.0.1:5500/index.html#t-shirt>T-shirt</a>
+                        <a href=http://127.0.0.1:5500/index.html#flash-sale>Flash Sale</a>
                     </div>
                 </li>
                 <li><a href="registration.html">Registration</a></li>
@@ -52,44 +129,46 @@
     </header>
     <main>
         <div class="registration_form">
-            <h3>Registration</h3>
-            <hr>
-            <form action="">
+            <form action="#" method="" onsubmit="formValidation()">
+                <h3>Registration Here</h3>
                 <table>
                     <tr>
                         <td><label>First Name: </label></td>
-                        <td><input type="text"></td>
+                        <td><input type="text" id="fName">
+                            <span id="fnameError"></span>
+                        </td>
                     </tr>
                     <tr>
                         <td><label for="lastName">Last Name:</label></td>
-                        <td><input type="email"></td>
+                        <td><input type="text" id="lName">
+                            <span id="l_nameError"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="Femail">
+                            <span id="eError"></span>
+                        </td>
                     </tr>
                     <tr>
                         <td><label for="mobile">Mobile:</label></td>
-                        <td><input type="tel"></td>
+                        <td><input type="tel" id="mobile">
+                            <span id="mError"></span>
+                        </td>
                     </tr>
                     <tr>
                         <td><label for="pass">Password:</label></td>
-                        <td><input type="password"></td>
+                        <td><input type="password" id="pass">
+                            <span id="pError"></span>
+                        </td>
                     </tr>
                     <tr>
                         <td><label for="conPass">Confirm Password:</label></td>
-                        <td><input type="password"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="certificate">Certificate:</label></td>
-
-                        <td>
-                            <input type="checkbox" value="pec" name="check-certificate">
-                            <label>PEC</label>
-                            <input type="checkbox" value="JSC" name="check-certificate">
-                            <label>JSC</label>
-                            <input type="checkbox" value="ssc" name="check-certificate">
-                            <label>SSC</label>
-                            <input type="checkbox" value="hsc" name="check-certificate">
-                            <label>HSC</label>
+                        <td><input type="password" id="confirmPass">
+                            <span id="cpError"></span>
                         </td>
                     </tr>
+
                     <tr>
                         <td><label for="gender">Gender:</label></td>
                         <td>
@@ -101,20 +180,7 @@
                             <label>Others</label>
                         </td>
                     </tr>
-                    <tr>
-                        <td><label for="board_name">Board Name:</label></td>
-                        <td>
-                            <select>
-                                <option>Chose option</option>
-                                <option>Sylhet</option>
-                                <option>Dhaka</option>
-                                <option>Rajshahi</option>
-                                <option>Borishal</option>
-                                <option>Cumillah</option>
-                                <option>Chottogram</option>
-                            </select>
-                        </td>
-                    </tr>
+
                     <tr>
                         <td><label for="dob">Date of birth:</label></td>
                         <td><input type="date"></td>
@@ -125,18 +191,19 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input type="reset" value="Reset">
-                            <input type="submit" value="Register">
+                            <input type="submit" id="submit_btn" value="Register">
                         </td>
                     </tr>
                 </table>
             </form>
         </div>
     </main>
-    <footer>
+    <!-- <footer>
         <small>This website is develope by &copy;Nayebul Jannath Chowdhury<br>
             all of the right goes to Moni sir</small>
-    </footer>
+    </footer> -->
+
+    <script src="app.js"></script>
 </body>
 
 </html>
